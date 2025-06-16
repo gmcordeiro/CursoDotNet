@@ -17,7 +17,5 @@ public class Program
         string myName = "Guilherme M. Cordeiro";
         string myBirthday = "15/02/1996";
         Console.WriteLine($"Nome: {myName}, Aniversário: {myBirthday}");
-
-
     }
 }
