@@ -15,7 +15,8 @@ public class Program
         // Aula sobre variaveis
 
         string myName = "Guilherme M. Cordeiro";
-        string myBirthday = "15/02/1996";
+        IFormatProvider culture = new System.Globalization.CultureInfo("pt-BR", true);
+        DateTime myBirthday = DateTime.Parse("15/02/1996", culture);
         Console.WriteLine($"Nome: {myName}, Aniversário: {myBirthday}");
     }
 }
