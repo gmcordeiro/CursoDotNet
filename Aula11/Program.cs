@@ -11,10 +11,15 @@ public class Program {
 			"3" => 3,
 			"4" => 4,
 			"5" => 5,
-			_ => throw new ArgumentException("Invalid number!")
+			_ => logInvalidValue() // Default case, returning 0 if input is invalid
 		};
 
 		Console.WriteLine($"You entered: {umber}");
 
+	}
+
+	private static int logInvalidValue() {
+		Console.WriteLine("Invalid number!");
+		return 0;
 	}
 }
