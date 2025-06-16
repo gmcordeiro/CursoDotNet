@@ -1,29 +1,25 @@
-﻿namespace Aula12;
+﻿namespace Aula13;
 
 public class Program {
-
-	public static void Main(string[] args) {
-
-		// While loop example
+	public static void Main() {
 		Console.WriteLine("Enter a number between 1 and 5 (or 'exit' to quit):");
-		string? input = Console.ReadLine();
-
-		while (input?.ToLower() != "exit") {
+		string? input;
+		do {
+			input = Console.ReadLine();
+			if (input?.ToLower() == "exit") break;
 			int number = input switch {
 				"1" => 1,
 				"2" => 2,
 				"3" => 3,
 				"4" => 4,
 				"5" => 5,
-				_ => logInvalidValue()
+				_ => LogInvalidValue()
 			};
 			Console.WriteLine($"You entered: {number}");
 			Console.WriteLine("Enter another number between 1 and 5 (or 'exit' to quit):");
-			input = Console.ReadLine();
-		}
+		} while (true);
 	}
-
-	private static int logInvalidValue() {
+	private static int LogInvalidValue() {
 		Console.WriteLine("Invalid number!");
 		return 0;
 	}
