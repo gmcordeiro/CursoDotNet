@@ -3,10 +3,14 @@
 // For loop example
 public class Program {
 	public static void Main() {
-		Console.WriteLine("Enter a number between 1 and 5 (or 'exit' to quit):");
-		int input = Convert.ToInt32(Console.ReadLine());
-		for (int i = 0; i <= input; i++) {
-			Console.WriteLine($"Count: {i}");
+
+		// Aula 14, exemplo de for loop e interpolação de strings
+
+		for (int i = 1; i <= 10; i++) {
+			for (int j = 1; j <= 10; j++) {
+				Console.Write($"{i * j,6}");
+			}
+			Console.WriteLine();
 		}
 	}
 }
